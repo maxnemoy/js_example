@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'dart:js' as jsDart;
+
 void main() {
   runApp(const App());
 }
@@ -24,7 +26,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   void _simpl() {
-    
+    jsDart.context.callMethod("simple_call", ["dart"]);
   }
 
   @override
