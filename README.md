@@ -2,7 +2,15 @@
 
 ## simpl
 
+### js
+connect building lib to `index.html`
+`<script src="simpl.js"></script>`
 
+### dart 
+
+add `import 'dart:js' as jsDart;`
+
+call js function `jsDart.context.callMethod("simple_call", ["dart"])`;
 
 ## npm
 
