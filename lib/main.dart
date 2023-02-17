@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'dart:js' as jsDart;
 
+import 'package:simple/some/export.dart';
+
 void main() {
   runApp(const App());
 }
@@ -29,6 +31,11 @@ class _HomeState extends State<Home> {
     jsDart.context.callMethod("simple_call", ["dart"]);
   }
 
+  void _npmLib() {
+    SomeLib some = SomeLib();
+    some.getVersion();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,6 +44,7 @@ class _HomeState extends State<Home> {
       ),
       body: Column(children: [
         ElevatedButton(onPressed: _simpl, child: const Text("Simpl")),
+        ElevatedButton(onPressed: _npmLib, child: const Text("NPM call")),
       ]),
     );
   }

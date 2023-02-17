@@ -1,16 +1,47 @@
-# simple
+# dart call js
 
-A new Flutter project.
+## simpl
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## npm
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### JS layer
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+open target folder 
+
+init node module
+`npm init -y`
+
+install webpack
+`npm install webpack webpack-cli --save-dev`
+
+install npm package
+`npm install {package} -y`
+
+wrap your code to module
+
+configure `webpack.config.js`
+
+build webpack
+`npx webpack build`
+
+connect building lib to `index.html`
+`<script src="./libs/ffmpeg/dist/ffmpeg_lib.js"></script>`
+
+Check
+- run flutter project
+- open dev console(f12)
+- call function by package name
+
+![alt text](./static/console.png)
+
+### Dart layer
+
+add [js lib](https://pub.dev/packages/js)
+
+add bindings to js module
+
+impl js and io variants
+
+use))
